@@ -5,8 +5,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
-	  <Title></Title>
+	  <Title>FireSumulate</Title>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Description>There are interfaces of cell, field, process fire, simulate fire and enum cell state</Description>
+	  <AssemblyVersion>1.0.0.0</AssemblyVersion>
+	  <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>

@@ -10,5 +10,5 @@ public interface IProcessFire<out T> where T : ICell
     /// метод обновляет поле клеток после 1 поколения пожара
     /// </summary>
     /// <returns>возвращает получившееся поле</returns>
-    public T[] UpdateFieldAfterFire();
+    public T[,] UpdateFieldAfterFire();
 }

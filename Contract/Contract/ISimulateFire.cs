@@ -11,5 +11,5 @@ public interface ISimulateFire<T> where T : ICell
     /// </summary>
     /// <param name="cells">входное поле клеток</param>
     /// <returns>результат поля после пожара</returns>
-    public ICell[] SimulateFire(ICell[] cells);
+    public ICell[,] SimulateFire(ICell[,] cells);
 }
