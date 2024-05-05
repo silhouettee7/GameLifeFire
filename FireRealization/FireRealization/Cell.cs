@@ -2,8 +2,8 @@
 
 namespace FireRealization;
 
-public class Cell : ICell
+public class Cell(CellState state) : ICell
 {
-    public CellState State { get; set; }
-    public CellState NextState { get; set; }
+    public CellState State { get; set; } = state;
+    public CellState NextState { get; set; } = state;
 }
