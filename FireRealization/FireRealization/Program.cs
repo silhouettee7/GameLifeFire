@@ -1,8 +1,9 @@
-﻿using Contract;
+﻿using System.Diagnostics;
+using Contract;
 using FireRealization;
 
-int sizeX = 3;
-int sizeY = 3;
+int sizeX = 6;
+int sizeY = 6;
 var field = new FireField(sizeX, sizeY);
 field.Initialize();
 int.TryParse(Console.ReadLine(), out int startX);
@@ -12,7 +13,7 @@ field.SetStartBurningCell(startX, startY);
 
 Cell[,] newField;
 
-for (int k = 0; k < 10; k++)
+while (!field.CheckEndFire())
 {
     newField = field.UpdateFieldAfterFire();
     for (int i = 0; i < sizeX; i++)
@@ -28,3 +29,5 @@ for (int k = 0; k < 10; k++)
     Console.WriteLine();
     Thread.Sleep(1000);
 }
+
+

@@ -11,4 +11,10 @@ public interface IProcessFire<out T> where T : ICell
     /// </summary>
     /// <returns>возвращает получившееся поле</returns>
     public T[,] UpdateFieldAfterFire();
+
+    /// <summary>
+    /// метод проверяет закончился ли пожар
+    /// </summary>
+    /// <returns>true - если закончился, false - не закончился</returns>
+    public bool CheckEndFire();
 }
