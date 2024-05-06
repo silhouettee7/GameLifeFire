@@ -7,8 +7,6 @@ public class FireField(int sizeX, int sizeY) : IField, IProcessFire<Cell>
     private Cell[,]? _tempField;
     private bool _isInitialized;
     private bool _isFireEnded;
-    private int _startX;
-    private int _startY;
     public int SizeX { get; } = sizeX;
     public int SizeY { get; } = sizeY;
 
@@ -36,15 +34,6 @@ public class FireField(int sizeX, int sizeY) : IField, IProcessFire<Cell>
             }
         }
         _isInitialized = true;
-        
-        for (int i = 0; i < SizeX; i++)
-        {
-            for (int j = 0; j < SizeY; j++)
-            {
-                Console.Write($"{(int)_field[i, j].State}  ");
-            }
-            Console.WriteLine();
-        }
     }
 
     public void SetStartBurningCell(int startX, int startY)
@@ -58,15 +47,8 @@ public class FireField(int sizeX, int sizeY) : IField, IProcessFire<Cell>
             throw new ArgumentException("Некорректные стартовые значения");
         }
 
-        if (_field[_startX - 1, _startY - 1].State == CellState.Burning)
-        {
-            _field[_startX, _startY].State = _field[_startX, _startY].PreviousState;
-        }
-        _startX = startX;
-        _startY = startY;
-        
-        _field[_startX-1, _startY-1].State = CellState.Burning;
-        _tempField![_startX-1, _startY-1].State = CellState.Burning;
+        _field[startX-1, startY-1].State = CellState.Burning;
+        _tempField![startX-1, startY-1].State = CellState.Burning;
     }
 
     public Cell[,] UpdateFieldAfterFire()
