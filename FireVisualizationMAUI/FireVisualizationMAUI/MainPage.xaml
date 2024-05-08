@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FireVisualizationMAUI.MainPage">
+        
+        <StackLayout x:Name ="MainLayout" 
+                     Spacing="120"
+                     Padding="300,90"
+                     BackgroundColor="Beige">
+            
+            <Label Text="Fire Simulation" 
+                   FontSize="50"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Start"
+                   FontFamily="Helvetica"/>
+            
+            <Button x:Name ="AssemblyButton" 
+                    Text="Choose assembly" 
+                    TextColor="White"
+                    FontSize="25" 
+                    BackgroundColor="CornflowerBlue"
+                    BorderWidth="1"
+                    WidthRequest="250"
+                    HeightRequest="50"/>
+
+        </StackLayout>
+
+</ContentPage>
