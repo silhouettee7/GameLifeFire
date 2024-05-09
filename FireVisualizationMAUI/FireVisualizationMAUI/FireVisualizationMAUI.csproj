@@ -65,15 +65,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="MyPages\SettingFieldParamsPage.xaml.cs">
-	    <DependentUpon>SettingFieldParamsPage.xaml</DependentUpon>
+	  <Compile Update="MyPages\VisualizationFirePage.xaml.cs">
+	    <DependentUpon>VisualizationFirePage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="MyPages\SettingFieldParamsPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="MyPages\VisualizationFirePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
