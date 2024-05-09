@@ -1,11 +1,10 @@
 ﻿using Contract;
 namespace FireRealization;
 
-public class FireField(int sizeX, int sizeY) : IField, IProcessFire<Cell>
+public class FireField(int sizeX, int sizeY) : IField<Cell>, IProcessFire
 {
     private Cell[,]? _field;
     private Cell[,]? _tempField;
-    private bool _isInitialized;
     private bool _isFireEnded;
     public int SizeX { get; } = sizeX;
     public int SizeY { get; } = sizeY;
@@ -15,13 +14,18 @@ public class FireField(int sizeX, int sizeY) : IField, IProcessFire<Cell>
         return _isFireEnded;
     }
 
+    public Cell[,] GetField()
+    {
+        if (_field == null)
+        {
+            throw new NullReferenceException("Поле не создано");
+        }
+        
+        return _field;
+    }
+
     public void Initialize()
     {
-        if (_isInitialized)
-        {
-            throw new FieldInitializedAlreadyException("Поле уже создано");
-        }
-
         _field = new Cell[SizeX, SizeY];
         _tempField = new Cell[SizeX, SizeY];
         for (int x = 0; x < SizeX; x++)
@@ -33,7 +37,6 @@ public class FireField(int sizeX, int sizeY) : IField, IProcessFire<Cell>
                 _tempField[x, y] = new Cell(randomState);
             }
         }
-        _isInitialized = true;
     }
 
     public void SetStartBurningCell(int startX, int startY)
@@ -42,16 +45,16 @@ public class FireField(int sizeX, int sizeY) : IField, IProcessFire<Cell>
         {
             throw new NullReferenceException("Поле для пожара не создано");
         }
-        if (startX - 1 < 0 || startX - 1 >= SizeX || startY - 1 < 0 || startY - 1 >= SizeY)
+        if (startX  < 0 || startX  >= SizeX || startY  < 0 || startY >= SizeY)
         {
             throw new ArgumentException("Некорректные стартовые значения");
         }
 
-        _field[startX-1, startY-1].State = CellState.Burning;
-        _tempField![startX-1, startY-1].State = CellState.Burning;
+        _field[startX, startY].State = CellState.Burning;
+        _tempField![startX, startY].State = CellState.Burning;
     }
 
-    public Cell[,] UpdateFieldAfterFire()
+    public void UpdateFieldAfterFire()
     {
         if (_field == null)
         {
@@ -80,11 +83,8 @@ public class FireField(int sizeX, int sizeY) : IField, IProcessFire<Cell>
                 _field[x, y].PreviousState = _tempField![x, y].PreviousState;
             }
         }
-
-        return _field;
     }
-
-    public Cell[,] UpdateFieldWithoutParallel()
+    public void UpdateFieldWithoutParallel()
     {
         if (_field == null)
         {
@@ -112,8 +112,6 @@ public class FireField(int sizeX, int sizeY) : IField, IProcessFire<Cell>
                 _field[x, y].PreviousState = _tempField![x, y].PreviousState;
             }
         }
-
-        return _field;
     }
     private void UpdateCellState(int x, int y)
     {

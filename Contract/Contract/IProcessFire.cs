@@ -4,13 +4,12 @@
 /// Интерфейс пожара одного поколения
 /// </summary>
 /// <typeparam name="T">клетка поля</typeparam>
-public interface IProcessFire<out T> where T : ICell
+public interface IProcessFire
 {
     /// <summary>
     /// метод обновляет поле клеток после 1 поколения пожара
     /// </summary>
-    /// <returns>возвращает получившееся поле</returns>
-    public T[,] UpdateFieldAfterFire();
+    public void UpdateFieldAfterFire();
 
     /// <summary>
     /// метод проверяет закончился ли пожар

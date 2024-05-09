@@ -69,11 +69,11 @@ namespace FireVisualizationMAUI
         private bool CheckAssemblyWithContract()
         {
             var types = _assembly!.GetTypes();
-            _typeAssembly = types.
-                FirstOrDefault(type => 
-                    type.IsClass && 
-                    type.GetInterfaces()
-                    .Any(_interface => _interface.Name == typeof(IProcessFire<>).Name));
+            _typeAssembly = types.FirstOrDefault(type =>
+                type.IsClass &&
+                type.GetInterfaces()
+                    .Count(_face => _face.Name == typeof(IProcessFire).Name ||
+                                    (_face.IsGenericType && _face.Name == typeof(IField<>).Name)) == 2);
             
             if (_typeAssembly == null)
             {

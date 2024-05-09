@@ -9,7 +9,7 @@
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <Description>There are interfaces of cell, field, process fire, simulate fire and enum cell state</Description>
 	  <AssemblyVersion>1.0.0.0</AssemblyVersion>
-	  <Version>1.0.2</Version>
+	  <Version>1.0.3</Version>
   </PropertyGroup>
 
 </Project>

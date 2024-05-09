@@ -57,7 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Contract" Version="1.0.2" />
+		<PackageReference Include="Contract" Version="1.0.3" />
 		<PackageReference Include="Microsoft.Extensions.Primitives" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />

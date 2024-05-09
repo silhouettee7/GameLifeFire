@@ -11,12 +11,12 @@ public interface ISimulateFire<T> where T : ICell
     /// </summary>
     /// <param name="cells">входное поле клеток</param>
     /// <returns>результат поля после пожара</returns>
-    public ICell[,] SimulateFire(ICell[,] cells);
+    public T[,] SimulateFire(T[,] cells);
 
     /// <summary>
     /// проверяет закончился ли пожар
     /// </summary>
     /// <param name="cells">поле клеток, в котором проверяется наличие пожара</param>
     /// <returns>true - если закончился, false - не закончился</returns>
-    public bool CheckEndFire(ICell[,] cells);
+    public bool CheckEndFire(T[,] cells);
 }
