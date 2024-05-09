@@ -65,13 +65,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="MyPages\VisualizationFirePage.xaml.cs">
-	    <DependentUpon>VisualizationFirePage.xaml</DependentUpon>
+	  <Compile Update="MyPages\VisualizationPage.xaml.cs">
+	    <DependentUpon>VisualizationPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MyPages\SettingValuesPage.xaml.cs">
+	    <DependentUpon>SettingValuesPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="MyPages\VisualizationFirePage.xaml">
+	  <MauiXaml Update="MyPages\VisualizationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MyPages\SettingValuesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FireVisualizationMAUI.MyPages.VisualizationPage">
+    <ScrollView>
+        <StackLayout x:Name="VisualLayout"
+                     Spacing="30">
+            
+            <Label Text="Choose cell to start fire" 
+                   HorizontalTextAlignment="Center"
+                   FontSize="35"/>
+            
+            <Frame x:Name="FrameFire"
+                   CornerRadius="10"
+                   HasShadow ="True"
+                   WidthRequest = "80"
+                   HeightRequest = "80"
+                   Padding="5"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   BackgroundColor="Coral">
+                <Grid x:Name="GridField"
+                      BackgroundColor="Coral">
+                </Grid>
+            </Frame>
+
+            <StackLayout Orientation="Horizontal"
+                         Spacing="30"
+                         HorizontalOptions="Center">
+                
+                <Button Text="Stop fire"
+                        HeightRequest="50"
+                        WidthRequest="100"
+                        Clicked="OnStopFireButtonClicked"/>
+
+                <Button Text="Continue"
+                        HeightRequest="50"
+                        WidthRequest="100"
+                        Clicked="OnContinueButtonClick"/>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

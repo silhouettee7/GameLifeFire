@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FireVisualizationMAUI.MyPages.SettingValuesPage">
+
+    <StackLayout Spacing="120"
+                 Padding="300,50">
+
+        <Label Text="Enter size field" 
+               FontSize="35"
+               FontFamily="Comic Sans"
+               HorizontalTextAlignment="Center"
+               />
+        
+        <StackLayout Orientation="Horizontal"
+                     Spacing="30"
+                     HorizontalOptions="Center">
+            <Entry x:Name="RowsEntry" 
+                   Placeholder="Rows"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   TextChanged="RowsTextChanged"/>
+
+            <Entry x:Name="ColumnsEntry"
+                   Placeholder="Columns" 
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   TextChanged="ColumnTextChanged"/>
+        </StackLayout>
+        
+
+        <Button x:Name="BuildBtn" 
+                Text="Build field"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="OnBuildFieldButtonClick"/>
+
+    </StackLayout>
+
+</ContentPage>

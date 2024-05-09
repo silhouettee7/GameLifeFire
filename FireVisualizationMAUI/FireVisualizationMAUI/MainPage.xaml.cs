@@ -16,7 +16,7 @@ namespace FireVisualizationMAUI
 
         private async void ToSettingFieldParamsPage(object? sender, EventArgs? e)
         {
-            await Navigation.PushAsync(new VisualizationFirePage(_typeAssembly!));
+            await Navigation.PushAsync(new SettingValuesPage(_typeAssembly!));
         }
 
         private void OnAssemblyButtonClick()
