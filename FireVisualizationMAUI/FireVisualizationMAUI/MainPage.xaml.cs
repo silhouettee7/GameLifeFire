@@ -88,6 +88,7 @@ namespace FireVisualizationMAUI
             {
                 Text = "Start",
                 TextColor = Colors.Beige,
+                FontFamily = "Comic Sans MS",
                 FontSize = 25,
                 BackgroundColor = Colors.Red,
                 BorderWidth = 1,

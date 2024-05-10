@@ -4,23 +4,29 @@
              x:Class="FireVisualizationMAUI.MyPages.VisualizationPage">
     <ScrollView>
         <StackLayout x:Name="VisualLayout"
-                     Spacing="30">
+                     Spacing="30"
+                     BackgroundColor="{DynamicResource BackgroundColor}"
+                     Padding="20">
             
             <Label Text="Choose cell to start fire" 
                    HorizontalTextAlignment="Center"
-                   FontSize="35"/>
+                   FontSize="35"
+                   TextColor="{DynamicResource LabelColor}"/>
             
             <Frame x:Name="FrameFire"
                    CornerRadius="10"
                    HasShadow ="True"
-                   WidthRequest = "80"
-                   HeightRequest = "80"
+                   WidthRequest = "82"
+                   HeightRequest = "82"
                    Padding="5"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
-                   BackgroundColor="Coral">
+                   BackgroundColor="{DynamicResource BackgroundColor}"
+                   BorderColor="{DynamicResource LabelColor}">
                 <Grid x:Name="GridField"
-                      BackgroundColor="Coral">
+                      BackgroundColor="{DynamicResource BackgroundColor}"
+                      HorizontalOptions="Center"
+                      VerticalOptions="Center">
                 </Grid>
             </Frame>
 
@@ -28,16 +34,34 @@
                          Spacing="30"
                          HorizontalOptions="Center">
                 
-                <Button Text="Stop fire"
+                <Button x:Name="StopFire" 
+                        Text="Stop fire"
+                        FontSize="15"
+                        BackgroundColor="{DynamicResource ButtonBackgroundColor}"
                         HeightRequest="50"
                         WidthRequest="100"
-                        Clicked="OnStopFireButtonClicked"/>
+                        Clicked="OnStopFireButtonClicked"
+                        Pressed="OnStopFireButtonPressed"
+                        Released="OnStopFireButtonReleased"/>
 
-                <Button Text="Continue"
+                <Button x:Name="ContinueFire"
+                        Text="Continue"
+                        FontSize="15"
+                        BackgroundColor="{DynamicResource ButtonBackgroundColor}"
                         HeightRequest="50"
                         WidthRequest="100"
-                        Clicked="OnContinueButtonClick"/>
-
+                        Pressed="OnContinueFireButtonPressed"
+                        Released="OnContinueFireButtonReleased"
+                       />
+            
+                <Button Text="ChangeTheme"
+                        FontSize="15"
+                        BackgroundColor="{DynamicResource ButtonBackgroundColor}"
+                        Clicked="ChangeTheme"
+                        HeightRequest="50"
+                        WidthRequest="150"
+                        Pressed="OnChangeThemeFireButtonPressed"
+                        Released="OnChangeThemeFireButtonReleased"/>
             </StackLayout>
 
         </StackLayout>

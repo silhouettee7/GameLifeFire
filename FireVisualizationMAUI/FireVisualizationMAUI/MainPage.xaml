@@ -6,17 +6,18 @@
         <StackLayout x:Name ="MainLayout" 
                      Spacing="120"
                      Padding="300,90"
-                     BackgroundColor="Beige">
+                     BackgroundColor="White">
             
             <Label Text="Fire Simulation" 
                    FontSize="50"
                    HorizontalOptions="Center" 
                    VerticalOptions="Start"
-                   FontFamily="Helvetica"/>
+                   FontFamily="Comic Sans MS"/>
             
             <Button x:Name ="AssemblyButton" 
                     Text="Choose assembly" 
                     TextColor="White"
+                    FontFamily="Comic Sans MS"
                     FontSize="25" 
                     BackgroundColor="CornflowerBlue"
                     BorderWidth="1"

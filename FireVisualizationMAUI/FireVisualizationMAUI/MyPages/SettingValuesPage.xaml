@@ -4,35 +4,45 @@
              x:Class="FireVisualizationMAUI.MyPages.SettingValuesPage">
 
     <StackLayout Spacing="120"
-                 Padding="300,50">
+                 Padding="300,100">
 
         <Label Text="Enter size field" 
-               FontSize="35"
-               FontFamily="Comic Sans"
-               HorizontalTextAlignment="Center"
-               />
+               FontSize="45"
+               FontFamily="Comic Sans MS"
+               HorizontalTextAlignment="Center"/>
         
         <StackLayout Orientation="Horizontal"
                      Spacing="30"
                      HorizontalOptions="Center">
+            
             <Entry x:Name="RowsEntry" 
                    Placeholder="Rows"
                    HorizontalTextAlignment="Center"
                    VerticalOptions="Center"
-                   TextChanged="RowsTextChanged"/>
+                   TextChanged="RowsTextChanged"
+                   HeightRequest="60"
+                   WidthRequest="110"/>
 
             <Entry x:Name="ColumnsEntry"
                    Placeholder="Columns" 
                    HorizontalTextAlignment="Center"
                    VerticalOptions="Center"
-                   TextChanged="ColumnTextChanged"/>
+                   TextChanged="ColumnTextChanged"
+                   HeightRequest="60"
+                   WidthRequest="110"/>
+
         </StackLayout>
-        
 
         <Button x:Name="BuildBtn" 
                 Text="Build field"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
+                HeightRequest="65"
+                WidthRequest="150"
+                FontSize="23"
+                FontFamily="Comic Sans MS"
+                TextColor="AliceBlue"
+                BackgroundColor="CornflowerBlue"
                 Clicked="OnBuildFieldButtonClick"/>
 
     </StackLayout>

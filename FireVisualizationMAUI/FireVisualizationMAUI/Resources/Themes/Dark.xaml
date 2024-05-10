@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FireVisualizationMAUI.Resources.Themes.Dark">
+
+    <Color x:Key="BackgroundColor">Black</Color>
+    <Color x:Key="LabelColor">White</Color>
+    <Color x:Key="ButtonBackgroundColor">BlueViolet</Color>
+
+    <SolidColorBrush x:Key="BackgroundColorBrush" Color="{StaticResource BackgroundColor}"/>
+    <SolidColorBrush x:Key="LabelColorBrush" Color="{StaticResource LabelColor}"/>
+    <SolidColorBrush x:Key="ButtonBackgroundColorBrush" Color="{StaticResource ButtonBackgroundColor}"/>
+</ResourceDictionary>
