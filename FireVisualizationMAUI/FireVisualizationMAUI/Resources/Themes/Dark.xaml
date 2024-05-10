@@ -6,7 +6,9 @@
     <Color x:Key="BackgroundColor">Black</Color>
     <Color x:Key="LabelColor">White</Color>
     <Color x:Key="ButtonBackgroundColor">BlueViolet</Color>
+    <Color x:Key="EntryBackgroundColor">GhostWhite</Color>
 
+    <SolidColorBrush x:Key="EntryBackgroundColorBrush" Color="{StaticResource EntryBackgroundColor}"/>
     <SolidColorBrush x:Key="BackgroundColorBrush" Color="{StaticResource BackgroundColor}"/>
     <SolidColorBrush x:Key="LabelColorBrush" Color="{StaticResource LabelColor}"/>
     <SolidColorBrush x:Key="ButtonBackgroundColorBrush" Color="{StaticResource ButtonBackgroundColor}"/>

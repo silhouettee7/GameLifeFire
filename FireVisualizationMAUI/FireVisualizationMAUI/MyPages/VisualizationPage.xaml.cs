@@ -168,38 +168,13 @@ public partial class VisualizationPage : ContentPage
         }
         _isFireContinued = true;
     }
-
-    private void OnStopFireButtonPressed(object? sender, EventArgs e)
+    private void OnDownButtonsPressed(object? sender, EventArgs e)
     {
         var btn = (Button)sender!;
         btn.HeightRequest -= 5;
         btn.WidthRequest -= 10;
     }
-    private void OnStopFireButtonReleased(object? sender, EventArgs e)
-    {
-        var btn = (Button)sender!;
-        btn.HeightRequest += 5;
-        btn.WidthRequest += 10;
-    }
-    private void OnContinueFireButtonPressed(object? sender, EventArgs e)
-    {
-        var btn = (Button)sender!;
-        btn.HeightRequest -= 5;
-        btn.WidthRequest -= 10;
-    }
-    private void OnContinueFireButtonReleased(object? sender, EventArgs e)
-    {
-        var btn = (Button)sender!;
-        btn.HeightRequest += 5;
-        btn.WidthRequest += 10;
-    }
-    private void OnChangeThemeFireButtonPressed(object? sender, EventArgs e)
-    {
-        var btn = (Button)sender!;
-        btn.HeightRequest -= 5;
-        btn.WidthRequest -= 10;
-    }
-    private void OnChangeThemeFireButtonReleased(object? sender, EventArgs e)
+    private void OnDownButtonsReleased(object? sender, EventArgs e)
     {
         var btn = (Button)sender!;
         btn.HeightRequest += 5;

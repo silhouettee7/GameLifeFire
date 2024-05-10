@@ -10,6 +10,7 @@
             
             <Label Text="Choose cell to start fire" 
                    HorizontalTextAlignment="Center"
+                   FontFamily="Comic Sans MS"
                    FontSize="35"
                    TextColor="{DynamicResource LabelColor}"/>
             
@@ -40,28 +41,31 @@
                         BackgroundColor="{DynamicResource ButtonBackgroundColor}"
                         HeightRequest="50"
                         WidthRequest="100"
+                        FontFamily="Comic Sans MS"
                         Clicked="OnStopFireButtonClicked"
-                        Pressed="OnStopFireButtonPressed"
-                        Released="OnStopFireButtonReleased"/>
+                        Pressed="OnDownButtonsPressed"
+                        Released="OnDownButtonsReleased"/>
 
                 <Button x:Name="ContinueFire"
                         Text="Continue"
                         FontSize="15"
                         BackgroundColor="{DynamicResource ButtonBackgroundColor}"
+                        FontFamily="Comic Sans MS"
                         HeightRequest="50"
                         WidthRequest="100"
-                        Pressed="OnContinueFireButtonPressed"
-                        Released="OnContinueFireButtonReleased"
+                        Pressed="OnDownButtonsPressed"
+                        Released="OnDownButtonsReleased"
                        />
             
                 <Button Text="ChangeTheme"
                         FontSize="15"
                         BackgroundColor="{DynamicResource ButtonBackgroundColor}"
+                        FontFamily="Comic Sans MS"
                         Clicked="ChangeTheme"
                         HeightRequest="50"
                         WidthRequest="150"
-                        Pressed="OnChangeThemeFireButtonPressed"
-                        Released="OnChangeThemeFireButtonReleased"/>
+                        Pressed="OnDownButtonsPressed"
+                        Released="OnDownButtonsReleased"/>
             </StackLayout>
 
         </StackLayout>

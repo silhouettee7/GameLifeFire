@@ -57,11 +57,12 @@ namespace FireVisualizationMAUI
                 
                 if (isAssemblyCorrect)
                 {
-                    CreateStartButton();
+                    BtnStart.IsEnabled = true;
                 }
                 else
                 {
                     DisplayAlert("Error", "Сould not find implementation IProcessFire", "OK");
+                    BtnStart.IsEnabled = false;
                 }
             }
         }
@@ -80,24 +81,6 @@ namespace FireVisualizationMAUI
                 return false;
             }
             return true;
-        }
-
-        private void CreateStartButton()
-        {
-            Button btnStart = new Button()
-            {
-                Text = "Start",
-                TextColor = Colors.Beige,
-                FontFamily = "Comic Sans MS",
-                FontSize = 25,
-                BackgroundColor = Colors.Red,
-                BorderWidth = 1,
-                WidthRequest = 140,
-                HeightRequest = 50,
-                Margin = 50
-            };
-            btnStart.Clicked += ToSettingFieldParamsPage;
-            MainLayout.Children.Add(btnStart);
         }
     }
 

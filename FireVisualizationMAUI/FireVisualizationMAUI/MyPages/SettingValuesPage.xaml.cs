@@ -53,4 +53,17 @@ public partial class SettingValuesPage : ContentPage
         _field.Initialize();
     }
 
+    private void OnBuildButtonPressed(object? sender, EventArgs e)
+    {
+        var btn = (Button)sender;
+        btn.HeightRequest -= 7;
+        btn.WidthRequest -= 12;
+    }
+
+    private void OnBuildButtonReleased(object? sender, EventArgs e)
+    {
+        var btn = (Button)sender;
+        btn.HeightRequest += 7;
+        btn.WidthRequest += 12;
+    }
 }

@@ -6,9 +6,10 @@
         <StackLayout x:Name ="MainLayout" 
                      Spacing="120"
                      Padding="300,90"
-                     BackgroundColor="White">
+                     BackgroundColor="{DynamicResource BackgroundColor}">
             
             <Label Text="Fire Simulation" 
+                   TextColor="{DynamicResource LabelColor}"
                    FontSize="50"
                    HorizontalOptions="Center" 
                    VerticalOptions="Start"
@@ -19,11 +20,22 @@
                     TextColor="White"
                     FontFamily="Comic Sans MS"
                     FontSize="25" 
-                    BackgroundColor="CornflowerBlue"
+                    BackgroundColor="{DynamicResource ButtonBackgroundColor}"
                     BorderWidth="1"
                     WidthRequest="250"
                     HeightRequest="50"/>
-
+        <Button x:Name="BtnStart"
+                Text = "Start"
+                TextColor = "Beige"
+                FontFamily = "Comic Sans MS"
+                FontSize = "25"
+                BackgroundColor ="Red"
+                BorderWidth = "1"
+                WidthRequest ="140"
+                HeightRequest="50"
+                Margin="50"
+                IsEnabled="False"
+                Clicked="ToSettingFieldParamsPage"/>
         </StackLayout>
 
 </ContentPage>

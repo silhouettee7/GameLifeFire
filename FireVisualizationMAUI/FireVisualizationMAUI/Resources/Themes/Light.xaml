@@ -5,7 +5,9 @@
     <Color x:Key="BackgroundColor">White</Color>
     <Color x:Key="LabelColor">Black</Color>
     <Color x:Key="ButtonBackgroundColor">CornflowerBlue</Color>
+    <Color x:Key="EntryBackgroundColor">Gray</Color>
 
+    <SolidColorBrush x:Key="EntryBackgroundColorBrush" Color="{StaticResource EntryBackgroundColor}"/>
     <SolidColorBrush x:Key="BackgroundColorBrush" Color="{StaticResource BackgroundColor}"/>
     <SolidColorBrush x:Key="LabelColorBrush" Color="{StaticResource LabelColor}"/>
     <SolidColorBrush x:Key="ButtonBackgroundColorBrush" Color="{StaticResource ButtonBackgroundColor}"/>
